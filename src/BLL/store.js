@@ -1,11 +1,15 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import  thunkMiddleware from "redux-thunk"
+import {forgotPassReducer} from "../home/forgotPasswordPage/forgotPassReducer";
+import {profileReducer} from "../home/profile/profileReducer";
+import {signUpReducer} from "../home/signUpPage/signUpReducer";
+import {signInReducer} from "../home/signInPage/signInReducer";
 
 
 let reducers = combineReducers({
-    signin: signInReducer,
+    signIn: signInReducer,
     profile: profileReducer,
-    singup: singUpReducer,
+    singUp: signUpReducer,
     forgotPass: forgotPassReducer,
 });
 

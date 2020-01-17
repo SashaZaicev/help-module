@@ -1,9 +1,12 @@
-import {signInInitialState} from "./signInInitialState";
-import {ISignInActions, SIGN_IN} from "./signInActions";
+export const FORGOT_PASS = "my-app/src/home/forgotPasswordPage";
 
-export const signInReducer = (state = signInInitialState, action: ISignInActions) => {
+const initialState = {
+
+}
+
+export const forgotPassReducer = (state = initialState , action: { type: any; }) => {
     switch (action.type) {
-        case SIGN_IN: { // blank
+        case FORGOT_PASS: {
             return {
                 ...state,
 
@@ -15,3 +18,6 @@ export const signInReducer = (state = signInInitialState, action: ISignInActions
         }
     }
 };
+export const forgotPass = () => ({
+    type: FORGOT_PASS,
+});

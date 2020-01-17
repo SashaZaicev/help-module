@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+.headerBlock a {
+  margin: 10px;
+}
+.headerBlock button {
+  text-transform: uppercase;
+  margin: 10px;
+}

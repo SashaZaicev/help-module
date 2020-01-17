@@ -1,29 +1,26 @@
 import React from 'react';
 import {Redirect, Route} from "react-router-dom";
-import SignInPage from '../../neko-2-features/f-1-authorization/a-1-sign-in/s-1-ui/SignInPage';
-import RegisterPage
-    from '../../neko-2-features/f-1-authorization/a-2-register/r-1-ui/RegisterPage';
-import ForgotPage from '../../neko-2-features/f-1-authorization/a-3-forgot/f-1-ui/ForgotPage';
-import NekoPage from "../../neko-2-features/f-4-social/s-1-neko/n-1-ui/NekoPage";
+import SignInPage from "./signInPage/SignInPage";
+import SignUpPage from "./signUpPage/SignUpPage";
+import ForgotPasswordPage from "./forgotPasswordPage/ForgotPasswordPage";
+import Profile from "./profile/Profile";
 
-// all project paths
-export const SIGN_IN_PATH = '/sign-in';
-export const REGISTER_PATH = '/register';
-export const FORGOT_PATH = '/forgot';
 
-export const NEKO_PATH = '/neko'; // profile
+export const SIGN_IN = '/sign-in';
+export const SIGN_UP = '/sign-up';
+export const FORGOT_PASS = '/forgotPass';
+export const PROFILE = '/profile';
 
 const Routes: React.FC = () => {
     return (
-        <>
-            <Route exact path={'/'} render={() => <Redirect to={SIGN_IN_PATH}/>}/>
+        <React.Fragment>
+            <Route exact path={'/'} render={() => <Redirect to={SIGN_IN}/>}/>
 
-            <Route path={SIGN_IN_PATH} render={() => <SignInPage/>}/>
-            <Route path={REGISTER_PATH} render={() => <RegisterPage/>}/>
-            <Route path={FORGOT_PATH} render={() => <ForgotPage/>}/>
-
-            <Route path={NEKO_PATH} render={() => <NekoPage/>}/>
-        </>
+            <Route path={SIGN_IN} render={() => <SignInPage/>}/>
+            <Route path={SIGN_UP} render={() => <SignUpPage/>}/>
+            <Route path={FORGOT_PASS} render={() => <ForgotPasswordPage/>}/>
+            <Route path={PROFILE} render={() => <Profile/>}/>
+        </React.Fragment>
     );
 };
 

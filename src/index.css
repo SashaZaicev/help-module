@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.headerBlock{
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-around;
+
+}
+.headerBlock a{
+  text-decoration: none;
+}

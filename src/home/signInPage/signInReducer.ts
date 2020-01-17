@@ -1,12 +1,12 @@
-export const SIGN_UP = "my-app/src/home/signUpPage";
+export const SIGN_IN = "my-app/src/home/signInPage";
 
 const initialState = {
 
 }
 
-export const signUpReducer = (state = initialState , action: { type: any; }) => {
+export const signInReducer = (state = initialState , action: { type: any; }) => {
     switch (action.type) {
-        case SIGN_UP: {
+        case SIGN_IN: {
             return {
                 ...state,
 
@@ -18,6 +18,6 @@ export const signUpReducer = (state = initialState , action: { type: any; }) => 
         }
     }
 };
-export const signUp = () => ({
-    type: SIGN_UP,
+export const signIn = () => ({
+    type: SIGN_IN,
 });
