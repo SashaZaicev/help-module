@@ -9,10 +9,12 @@ import {signInReducer} from "../home/signInPage/signInReducer";
 let reducers = combineReducers({
     signIn: signInReducer,
     profile: profileReducer,
-    singUp: signUpReducer,
+    signUp: signUpReducer,
     forgotPass: forgotPassReducer,
 });
 
 let store = createStore(reducers,applyMiddleware(thunkMiddleware));
+
+export type IAppStore = ReturnType<typeof reducers>;
 
 export default store

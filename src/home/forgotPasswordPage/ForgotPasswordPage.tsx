@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 import {SIGN_IN, SIGN_UP} from "../Routes";
 
-const ForgotPasswordPage = () => {
+const ForgotPasswordPage: React.FC = () => {
     return (
         <div className='container'>
             <div>Память уже не та :)</div>

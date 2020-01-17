@@ -22,7 +22,7 @@ const SignUpPage: React.FC<IPropsSignUpPage> = (props: IPropsSignUpPage) => {
     const signUpCallback = (e: any) => {
         if(password === password1){
             props.signUp(email, password);
-
+            
         }else{
             alert('ERROR')
         }

@@ -1,9 +1,9 @@
-import * as axios from 'axios';
+import axios from 'axios';
 
 
 
 export const API = {
-    getData(url) {
+    getData(url: string) {
         return axios.get(url)
     }
 };
