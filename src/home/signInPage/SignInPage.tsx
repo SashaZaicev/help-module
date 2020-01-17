@@ -2,7 +2,8 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 import {FORGOT_PASS, SIGN_UP} from "../Routes";
 
-const SignInPage = (props) => {
+
+const SignInPage: React.FC = (props) => {
     return (
         <div className='container'>
             <div>Введите свой логин и пароль!</div>

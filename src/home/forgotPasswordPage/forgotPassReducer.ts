@@ -2,7 +2,7 @@ export const FORGOT_PASS = "my-app/src/home/forgotPasswordPage";
 
 const initialState = {
 
-}
+};
 
 export const forgotPassReducer = (state = initialState , action: { type: any; }) => {
     switch (action.type) {

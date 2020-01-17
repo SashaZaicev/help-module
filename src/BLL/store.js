@@ -9,7 +9,7 @@ import {signInReducer} from "../home/signInPage/signInReducer";
 let reducers = combineReducers({
     signIn: signInReducer,
     profile: profileReducer,
-    singUp: signUpReducer,
+    signUp: signUpReducer,
     forgotPass: forgotPassReducer,
 });
 
