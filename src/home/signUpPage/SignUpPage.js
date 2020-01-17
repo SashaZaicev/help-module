@@ -12,7 +12,6 @@ const SignUpPage = () => {
             <div>
                 <button>Register</button>
             </div>
-            <p>Оля прогульщица</p>
             <div><NavLink to={SIGN_IN}>Sign in</NavLink></div>
 
         </div>
