@@ -15,4 +15,6 @@ let reducers = combineReducers({
 
 let store = createStore(reducers,applyMiddleware(thunkMiddleware));
 
+export type IAppStore = ReturnType<typeof reducers>;
+
 export default store

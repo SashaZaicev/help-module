@@ -1,6 +1,11 @@
 export const SIGN_UP = "my-app/src/home/signUpPage";
 
-const initialState = {
+interface ISignUpState {
+    email: string;
+    password: string;
+}
+
+const initialState: ISignUpState = {
     email: 'olllenka@mail.ru',
     password: '123',
 };

@@ -2,8 +2,14 @@ import React from 'react';
 import {SIGN_IN} from "../Routes";
 import {NavLink} from "react-router-dom";
 import { connect } from 'react-redux';
+import {IAppStore} from "../../BLL/store";
 
-const SignUpPage: React.FC = (props: any) => {
+interface IPropsSignUpPage {
+    email: string;
+    password: string;
+}
+
+const SignUpPage: React.FC<IPropsSignUpPage> = (props: IPropsSignUpPage) => {
     return (
         <div className='container'>
             <div>Ну напишите сюда номер своей карты и пин код, для регистрации</div>
@@ -19,11 +25,14 @@ const SignUpPage: React.FC = (props: any) => {
     );
 };
 
-const mapStateToProps = (state: any) => {
+
+
+
+
+const mapStateToProps = (state: IAppStore) => {
     return {
         email: state.signUp.email,
         password: state.signUp.password,
-
     }
 };
 
