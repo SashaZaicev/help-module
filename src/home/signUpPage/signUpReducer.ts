@@ -5,17 +5,24 @@ interface ISignUpState {
     password: string;
 }
 
+interface ISignUpAction {
+    type: typeof SIGN_UP;
+    email: string;
+    password: string;
+}
+
 const initialState: ISignUpState = {
-    email: 'olllenka@mail.ru',
-    password: '123',
+    email: '',
+    password: '',
 };
 
-export const signUpReducer = (state = initialState , action: { type: any; }) => {
+export const signUpReducer = (state = initialState , action: ISignUpAction) => {
     switch (action.type) {
         case SIGN_UP: {
             return {
                 ...state,
-
+                email: action.email,
+                password: action.password,
             }
         }
 
@@ -24,6 +31,5 @@ export const signUpReducer = (state = initialState , action: { type: any; }) => 
         }
     }
 };
-export const signUp = () => ({
-    type: SIGN_UP,
-});
+
+export const signUp = (email: string, password: string): ISignUpAction => ({type: SIGN_UP, email, password});
