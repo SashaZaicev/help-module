@@ -2,9 +2,10 @@ import React from 'react';
 
 const Profile = () => {
     return (
-        <div>
+        <div className='container'>
             <div>
                 Здесь моя мордашка!!!
+
             </div>
 
         </div>

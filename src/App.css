@@ -43,3 +43,10 @@
   text-transform: uppercase;
   margin: 10px;
 }
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
