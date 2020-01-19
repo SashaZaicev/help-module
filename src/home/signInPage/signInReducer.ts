@@ -1,15 +1,29 @@
 export const SIGN_IN = "my-app/src/home/signInPage";
 
-const initialState = {
-    email: "text@mail.ru",
-    password: "qwerty"
+interface ISignInState {
+    email: string;
+    password: string;
 }
 
-export const signInReducer = (state = initialState, action: { type: any; }) => {
+interface ISignInAction { // blank
+    type: typeof SIGN_IN;
+    email: string;
+    password: string;
+
+}
+
+const initialState = {
+    email: "",
+    password: ""
+}
+
+export const signInReducer = (state = initialState, action: ISignInAction) => {
     switch (action.type) {
         case SIGN_IN: {
             return {
                 ...state,
+                email: action.email,
+                password: action.password,
 
             }
         }
@@ -19,6 +33,6 @@ export const signInReducer = (state = initialState, action: { type: any; }) => {
         }
     }
 };
-export const signIn = () => ({
-    type: SIGN_IN,
+export const signIn = (email: string, password: string): ISignInAction => ({
+    type: SIGN_IN, email, password
 });
