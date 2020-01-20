@@ -9,12 +9,14 @@ interface ISignInAction { // blank
     type: typeof SIGN_IN;
     email: string;
     password: string;
+    rememberMe: boolean
 
 }
 
 const initialState = {
     email: "",
-    password: ""
+    password: "",
+    rememberMe: false,
 }
 
 export const signInReducer = (state = initialState, action: ISignInAction) => {
@@ -24,15 +26,15 @@ export const signInReducer = (state = initialState, action: ISignInAction) => {
                 ...state,
                 email: action.email,
                 password: action.password,
+                rememberMe: action.rememberMe,
 
             }
         }
-
         default: {
             return state;
         }
     }
 };
-export const signIn = (email: string, password: string): ISignInAction => ({
-    type: SIGN_IN, email, password
+export const signIn = (email: string, password: string, rememberMe: boolean): ISignInAction => ({
+    type: SIGN_IN, email, password, rememberMe,
 });

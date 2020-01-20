@@ -1,9 +1,9 @@
 import React from 'react';
 import {Redirect, Route} from "react-router-dom";
-import SignInPage from "./signInPage/SignInPage";
 import SignUpPage from "./signUpPage/SignUpPage";
 import ForgotPasswordPage from "./forgotPasswordPage/ForgotPasswordPage";
 import Profile from "./profile/Profile";
+import SignInPage from "./signInPage/SignInPage";
 
 
 export const SIGN_IN = '/sign-in';
