@@ -3,8 +3,8 @@ import {signIn} from "../home/signInPage/signInReducer";
 
 export const logInUser = (email: string, password: string, rememberMe: boolean) =>
     async (dispatch: any) => {
-        console.log()
+        // console.log()
         const response = await API.postLogin(email, password, rememberMe);
-        // await dispatch(signIn());
+        // await dispatch(signIn());//try catch
         console.log(response)
     }

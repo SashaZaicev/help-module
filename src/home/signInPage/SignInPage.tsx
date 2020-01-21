@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import {NavLink} from "react-router-dom";
-import {FORGOT_PASS, SIGN_UP} from "../Routes";
+import {NavLink, Redirect} from "react-router-dom";
+import {FORGOT_PASS, SIGN_UP, SIGN_IN, PROFILE} from "../Routes";
 import {connect} from "react-redux";
 import {IAppStore} from "../../BLL/store";
 import {signIn} from "./signInReducer";
@@ -16,8 +16,8 @@ interface IPropsSignInPage {
     password: string;
     signIn: (email: string, password: string, rememberMe: boolean) => void;
     rememberMe: boolean;
-
-    logInUser: any;
+    isAuth: boolean;
+    logInUser: (email: string, password: string, rememberMe: boolean) => void;
 }
 
 
@@ -36,7 +36,8 @@ const SignInPage: React.FC<IPropsSignInPage> = (props: IPropsSignInPage) => {
     };*/
     const logInUser = () => {
         props.logInUser(email, password, rememberMe)
-    }
+    };
+    if (props.isAuth) return <Redirect to={PROFILE}/>
     return (
         <div className='container'>
             <div>Введите свой логин и пароль!</div>
@@ -72,6 +73,7 @@ const mstp = (state: IAppStore) => {
         email: state.signIn.email,
         password: state.signIn.password,
         rememberMe: state.signIn.rememberMe,
+        isAuth: state.signIn.isAuth
     }
 }
 

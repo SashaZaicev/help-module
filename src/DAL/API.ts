@@ -11,5 +11,8 @@ export const API = {
     },
     postLogin(email: string, password: string, rememberMe: boolean) {
         return instance.post("/login", {email, password, rememberMe});
+    },
+    postForgot(email: string) {
+        return instance.post("/register", {email});
     }
 };

@@ -1,15 +1,15 @@
 export const SIGN_IN = "my-app/src/home/signInPage";
 
-interface ISignInState {
-    email: string;
-    password: string;
-}
+// interface ISignInState {
+//     email: string;
+//     password: string;
+// }
 
 interface ISignInAction { // blank
     type: typeof SIGN_IN;
     email: string;
     password: string;
-    rememberMe: boolean
+    rememberMe: boolean;
 
 }
 
@@ -17,6 +17,7 @@ const initialState = {
     email: "",
     password: "",
     rememberMe: false,
+    isAuth: false,
 }
 
 export const signInReducer = (state = initialState, action: ISignInAction) => {
@@ -27,7 +28,7 @@ export const signInReducer = (state = initialState, action: ISignInAction) => {
                 email: action.email,
                 password: action.password,
                 rememberMe: action.rememberMe,
-
+                isAuth: true,
             }
         }
         default: {
