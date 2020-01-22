@@ -1,15 +1,19 @@
-export const PROFILE = "my-app/src/home/profile";
+export const PROFILE_SET_NAME = "my-app/src/home/profile";
 
 const initialState = {
-
+name: ''
+}
+interface IProfileSetName{
+    type: typeof PROFILE_SET_NAME;
+    name: string;
 }
 
-export const profileReducer = (state = initialState , action: { type: any; }) => {
+export const profileReducer = (state = initialState , action: IProfileSetName) => {
     switch (action.type) {
-        case PROFILE: {
+        case PROFILE_SET_NAME: {
             return {
                 ...state,
-
+                    name: action.name
             }
         }
 
@@ -18,6 +22,6 @@ export const profileReducer = (state = initialState , action: { type: any; }) =>
         }
     }
 };
-export const profile = () => ({
-    type: PROFILE,
+export const profileSetName = (name: string): IProfileSetName => ({
+    type: PROFILE_SET_NAME, name
 });

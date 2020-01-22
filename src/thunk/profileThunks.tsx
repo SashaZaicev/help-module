@@ -1,15 +1,14 @@
 import {API} from "../DAL/API";
-import {signIn} from "../home/signInPage/signInReducer";
 import { profileSetName } from "../home/profile/profileReducer";
 
-export const logInUser =
-    (email: string, password: string, rememberMe: boolean) =>
+export const logoutUser =
+    (name: string) =>
         async (dispatch: any) => {
             // console.log()
             try {
-            const response = await API.postLogin(email, password, rememberMe);
+            // const response = await API.postLogin(email, password, rememberMe);
 
-                dispatch(profileSetName(response.data.name));
+                dispatch(profileSetName(''));
                 console.log('Neko Sign-in Success!')
 
             } catch (e) {
