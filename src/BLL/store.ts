@@ -13,8 +13,8 @@ let reducers = combineReducers({
     forgotPass: forgotPassReducer,
 });
 
-let store = createStore(reducers,applyMiddleware(thunkMiddleware));
+let store = createStore(reducers, applyMiddleware(thunkMiddleware));
 
 export type IAppStore = ReturnType<typeof reducers>;
 
-export default store
+export default store;

@@ -4,6 +4,7 @@ import {FORGOT_PASS, PROFILE, SIGN_IN, SIGN_UP} from "./home/Routes";
 
 const Header = () => {
     const [show, setShow] = useState(false);
+
     return (
         <div className='headerBlock'>
             <button onClick={() => setShow(!show)}>
