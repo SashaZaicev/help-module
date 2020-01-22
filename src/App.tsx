@@ -11,8 +11,8 @@ const App: React.FC = () => {
         <div className="App">
             <BrowserRouter>
                 <Provider store={store}>
-                <Header/>
-                <Routes/>
+                    <Header/>
+                    <Routes/>
                 </Provider>
             </BrowserRouter>
         </div>

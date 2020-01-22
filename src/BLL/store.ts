@@ -1,5 +1,5 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
-import  thunkMiddleware from "redux-thunk"
+import thunkMiddleware from "redux-thunk"
 import {forgotPassReducer} from "../home/forgotPasswordPage/forgotPassReducer";
 import {profileReducer} from "../home/profile/profileReducer";
 import {signUpReducer} from "../home/signUpPage/signUpReducer";

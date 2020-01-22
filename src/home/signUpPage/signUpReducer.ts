@@ -31,7 +31,6 @@ const initialState: ISignUpState = {
 export const signUpTC = (email: string, password: string) => async (dispatch: any) => {
     const result: any = await API.login(email, password);
     if (result.ok) {
-
         // await repository.saveToken(result.token);
         // await repository.saveUserName(username);
         dispatch(signUp(email, password))
@@ -40,7 +39,7 @@ export const signUpTC = (email: string, password: string) => async (dispatch: an
     }
 };
 
-export const signUpReducer = (state = initialState , action: ISignUpAction | ISignErrorAction) => {
+export const signUpReducer = (state = initialState, action: ISignUpAction | ISignErrorAction) => {
     switch (action.type) {
         case SIGN_UP: {
             return {

@@ -5,7 +5,6 @@ const Profile: React.FC = () => {
         <div className='container'>
             <div>
                 Здесь моя мордашка!!!
-
             </div>
 
         </div>
