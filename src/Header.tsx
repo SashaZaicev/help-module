@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
 import {FORGOT_PASS, PROFILE, SIGN_IN, SIGN_UP} from "./home/Routes";
 
-const Header = () => {
+const Header: React.FC = () => {
     const [show, setShow] = useState(false);
+
     return (
         <div className='headerBlock'>
             <button onClick={() => setShow(!show)}>
