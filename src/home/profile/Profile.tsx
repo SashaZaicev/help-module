@@ -3,8 +3,7 @@ import {Redirect} from "react-router-dom";
 import {SIGN_IN} from "../Routes";
 import {IAppStore} from "../../BLL/store";
 import {connect} from 'react-redux';
-import {profileSetName} from "./profileReducer";
-// import {logoutUser} from "../../thunk/profileThunks";
+
 
 interface IProfilePage {
     isAuth: boolean;
@@ -34,5 +33,6 @@ const mstp = (state: IAppStore) => {
         isAuth: state.signIn.isAuth,
         name: state.profile.name
     }
-}
+};
+
 export default connect(mstp,{})(Profile);

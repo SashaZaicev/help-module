@@ -5,7 +5,7 @@ export const SIGN_IN = "my-app/src/home/signInPage";
 //     password: string;
 // }
 
-interface ISignInAction { // blank
+interface ISignInAction {
     type: typeof SIGN_IN;
     email: string;
     password: string;
@@ -17,8 +17,8 @@ const initialState = {
     email: "",
     password: "",
     rememberMe: false,
-    isAuth: false,
-}
+    isAuth: true,
+};
 
 export const signInReducer = (state = initialState, action: ISignInAction) => {
     switch (action.type) {
