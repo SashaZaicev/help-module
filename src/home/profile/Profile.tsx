@@ -12,7 +12,7 @@ interface IProfilePage {
 }
 
 const Profile: React.FC<IProfilePage> = (props: IProfilePage) => {
-    if (props.isAuth) return <Redirect to={SIGN_IN}/>
+    if (!props.isAuth) return <Redirect to={SIGN_IN}/>
     // const logoutUser = () => {
     //     props.logoutUser()
     // }

@@ -18,7 +18,7 @@ const initialState = {
     password: "",
     rememberMe: false,
     isAuth: true,
-}
+};
 
 export const signInReducer = (state = initialState, action: ISignInAction) => {
     switch (action.type) {
