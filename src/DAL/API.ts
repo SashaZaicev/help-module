@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-// const instance = axios.create({
-//     baseURL: "https://dry-forest-56016.herokuapp.com/auth",
-// //     withCredentials: true,
-// });
+const instance = axios.create({
+    baseURL: "https://dry-forest-56016.herokuapp.com/auth",
+//     withCredentials: true,
+});
 
 export const API = {
     login(email: string, password: string) {
@@ -24,6 +24,12 @@ export const API = {
             })
         }
     },
+    postLogin(email: string, password: string, rememberMe: boolean) {
+        return instance.post("/login", {email, password, rememberMe});
+    },
+    postForgot(email: string) {
+        return instance.post("/register", {email});
+    }
 };
 // export const API = {
 //     getData() {

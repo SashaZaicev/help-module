@@ -3,6 +3,7 @@ import {Redirect} from "react-router-dom";
 import {SIGN_IN} from "../Routes";
 import {IAppStore} from "../../BLL/store";
 import {connect} from 'react-redux';
+import {profileSetName} from "./profileReducer";
 // import {logoutUser} from "../../thunk/profileThunks";
 
 interface IProfilePage {
@@ -12,10 +13,11 @@ interface IProfilePage {
 }
 
 const Profile: React.FC<IProfilePage> = (props: IProfilePage) => {
-    if (props.isAuth) return <Redirect to={SIGN_IN}/>
+    if (!props.isAuth) return <Redirect to={SIGN_IN}/>
     // const logoutUser = () => {
     //     props.logoutUser()
     // }
+
     return (
         <div className='container'>
             <div>
@@ -33,4 +35,4 @@ const mstp = (state: IAppStore) => {
         name: state.profile.name
     }
 }
-export default connect(mstp)(Profile);
+export default connect(mstp,{})(Profile);
