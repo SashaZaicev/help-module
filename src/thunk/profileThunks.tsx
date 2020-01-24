@@ -1,4 +1,3 @@
-import {API} from "../DAL/API";
 import { profileSetName } from "../home/profile/profileReducer";
 
 export const logoutUser =

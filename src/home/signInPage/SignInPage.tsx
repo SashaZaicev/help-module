@@ -16,7 +16,7 @@ interface IPropsSignInPage {
     password: string;
     signIn: (email: string, password: string, rememberMe: boolean) => void;
     rememberMe: boolean;
-    isAuth: boolean;
+    // isAuth: boolean;
     logInUser: (email: string, password: string, rememberMe: boolean) => void;
 }
 
@@ -37,7 +37,7 @@ const SignInPage: React.FC<IPropsSignInPage> = (props: IPropsSignInPage) => {
     const logInUser = () => {
         props.logInUser(email, password, rememberMe)
     };
-    if (!props.isAuth) return <Redirect to={PROFILE}/>
+    // if (props.isAuth) return <Redirect to={PROFILE}/>
     return (
         <div className='container'>
             <div>Введите свой логин и пароль!</div>
