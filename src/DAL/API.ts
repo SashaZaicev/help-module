@@ -6,6 +6,15 @@ const instance = axios.create({
 });
 
 export const API = {
+    getData() {
+        return instance.get('')
+    },
+    postLogin(email: string, password: string, rememberMe: boolean) {
+        return instance.post("/login", {email, password, rememberMe});
+    },
+    postForgot(email: string) {
+        return instance.post("/register", {email});
+    },
     login(email: string, password: string) {
         if (email === 'Admin' && password === '123123') {
             return new Promise((resolve) => {
@@ -24,25 +33,4 @@ export const API = {
             })
         }
     },
-    postLogin(email: string, password: string, rememberMe: boolean) {
-        return instance.post("/login", {email, password, rememberMe});
-    },
-    postForgot(email: string) {
-        return instance.post("/register", {email});
-    }
 };
-// export const API = {
-//     getData() {
-//         return instance.get('')
-//     },
-//     postLogin(email: string, password: string, rememberMe: boolean) {
-//         return instance.post("/login", {email, password, rememberMe});
-//     },
-//     postForgot(email: string) {
-//         return instance.post("/register", {email});
-//     }
-// };
-// //     getData(url: string) {
-// //         return axios.get(url)
-// //     }
-// // };

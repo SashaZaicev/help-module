@@ -17,7 +17,6 @@ const Profile: React.FC<IProfilePage> = (props: IProfilePage) => {
     // const logoutUser = () => {
     //     props.logoutUser()
     // }
-
     return (
         <div className='container'>
             <div>

@@ -17,8 +17,8 @@ const initialState = {
     email: "",
     password: "",
     rememberMe: false,
-    isAuth: false,
-}
+    isAuth: true,
+};
 
 export const signInReducer = (state = initialState, action: ISignInAction) => {
     switch (action.type) {
